@@ -13,20 +13,26 @@ public class MiniRechner {
         int a = scanner.nextInt();
         System.out.println("Bitte geben Sie Zahl b ein.");
         int b = scanner.nextInt();
-        
+
         // Kontrollausgabe
         System.out.println("Zahl a ist: " + a);
         System.out.println("Zahl b ist: " + b);
 
         // Funktion wählen
-        System.out.println("Bitte wählen Sie eine Funktion: (a) = addieren");
+        System.out.println(
+                "Bitte wählen Sie eine Funktion: (a) = addieren, (m) = multiplizieren");
         char f = scanner.next().charAt(0);
 
         // Funktion ausführen
         if (f == 'a') {
             int erg = a + b;
             System.out.println("Summe a+b: " + a + " + " + b + " = " + erg);
-        } else {
+        } else if (f == 'm') {
+            int erg = a * b;
+            System.out.println("Summe a*b: " + a + " * " + b + " = " + erg);
+        }
+
+        else {
             System.out.println("Operation nicht verfügbar.");
         }
 

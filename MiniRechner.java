@@ -18,28 +18,45 @@ public class MiniRechner {
         System.out.println("Zahl a ist: " + a);
         System.out.println("Zahl b ist: " + b);
 
-        // Funktion wählen
-        System.out.println(
-                "Bitte wählen Sie eine Funktion: (a) = addieren, (m) = multiplizieren");
-        char f = scanner.next().charAt(0);
+        // Berechnen
+        boolean weiter = true;
+        while (weiter) {
 
-        // Funktion ausführen
-        if (f == 'a') {
-            int erg = a + b;
-            System.out.println("Summe a+b: " + a + " + " + b + " = " + erg);
-        } else if (f == 'm') {
-            int erg = a * b;
-            System.out.println("Summe a*b: " + a + " * " + b + " = " + erg);
-        }
+            // Funktion wählen
+            System.out.println(
+                    "Bitte wählen Sie eine Funktion: (a) = addieren, (m) = multiplizieren, (q) = quit");
+            char f = scanner.next().charAt(0);
 
-        else {
-            System.out.println("Operation nicht verfügbar.");
-        }
+            // Funktion ausführen
+            switch (f) {
+            case 'a': {
+                int erg = a + b;
+                System.out
+                        .println("Summe a+b: " + a + " + " + b + " = " + erg);
+                break;
+            }
+            case 'm': {
+                int erg = a * b;
+                System.out
+                        .println("Summe a*b: " + a + " * " + b + " = " + erg);
+                break;
+            }
+            case 'q': {
+                weiter = false;
+                System.out.println("Tschüss.");
+                break;
+            }
+
+            default: {
+                System.out.println("Operation nicht verfügbar.");
+            }
+
+            }
+
+        } // while
 
         // fertig
-        System.out.println("Tschüss.");
         scanner.close();
 
     }
-
 }

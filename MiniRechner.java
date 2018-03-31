@@ -29,27 +29,27 @@ public class MiniRechner {
 
             // Funktion ausführen
             switch (f) {
-            case 'a': {
-                int erg = a + b;
-                System.out
-                        .println("Summe a+b: " + a + " + " + b + " = " + erg);
-                break;
-            }
-            case 'm': {
-                int erg = a * b;
-                System.out
-                        .println("Summe a*b: " + a + " * " + b + " = " + erg);
-                break;
-            }
-            case 'q': {
-                weiter = false;
-                System.out.println("Tschüss.");
-                break;
-            }
+                case 'a': {
+                    int erg = a + b;
+                    System.out
+                            .println("Summe a+b: " + a + " + " + b + " = " + erg);
+                    break;
+                }
+                case 'm': {
+                    int erg = a * b;
+                    System.out
+                            .println("Summe a*b: " + a + " * " + b + " = " + erg);
+                    break;
+                }
+                case 'q': {
+                    weiter = false;
+                    System.out.println("Tschüss.");
+                    break;
+                }
 
-            default: {
-                System.out.println("Operation nicht verfügbar.");
-            }
+                default: {
+                    System.out.println("Operation nicht verfügbar.");
+                }
 
             }
 

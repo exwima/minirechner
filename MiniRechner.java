@@ -24,7 +24,7 @@ public class MiniRechner {
 
             // Funktion wählen
             System.out.println(
-                    "Bitte wählen Sie eine Funktion: (a) = addieren, (m) = multiplizieren, (n) = neue Zahlen eingeben, (q) = quit");
+                    "Bitte wählen Sie eine Funktion: (a) = addieren, (s) = subtrahieren, (m) = multiplizieren, (n) = neue Zahlen eingeben, (q) = quit");
             char f = scanner.next().charAt(0);
 
             // Funktion ausführen
@@ -33,6 +33,12 @@ public class MiniRechner {
                     int erg = a + b;
                     System.out.println(
                             "Summe a+b: " + a + " + " + b + " = " + erg);
+                    break;
+                }
+                case 's': {
+                    int erg = a - b;
+                    System.out.println(
+                            "Differenz a-b: " + a + " - " + b + " = " + erg);
                     break;
                 }
                 case 'm': {

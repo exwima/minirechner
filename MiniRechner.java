@@ -24,32 +24,44 @@ public class MiniRechner {
 
             // Funktion wählen
             System.out.println(
-                    "Bitte wählen Sie eine Funktion: (a) = addieren, (m) = multiplizieren, (q) = quit");
+                    "Bitte wählen Sie eine Funktion: (a) = addieren, (m) = multiplizieren, (n) = neue Zahlen eingeben, (q) = quit");
             char f = scanner.next().charAt(0);
 
             // Funktion ausführen
             switch (f) {
-            case 'a': {
-                int erg = a + b;
-                System.out
-                        .println("Summe a+b: " + a + " + " + b + " = " + erg);
-                break;
-            }
-            case 'm': {
-                int erg = a * b;
-                System.out
-                        .println("Summe a*b: " + a + " * " + b + " = " + erg);
-                break;
-            }
-            case 'q': {
-                weiter = false;
-                System.out.println("Tschüss.");
-                break;
-            }
+                case 'a': {
+                    int erg = a + b;
+                    System.out.println(
+                            "Summe a+b: " + a + " + " + b + " = " + erg);
+                    break;
+                }
+                case 'm': {
+                    int erg = a * b;
+                    System.out.println(
+                            "Summe a*b: " + a + " * " + b + " = " + erg);
+                    break;
+                }
+                case 'n': {
+                    // Zwei Zahlen einlesen
+                    System.out.println("Bitte geben Sie Zahl a ein.");
+                    a = scanner.nextInt();
+                    System.out.println("Bitte geben Sie Zahl b ein.");
+                    b = scanner.nextInt();
 
-            default: {
-                System.out.println("Operation nicht verfügbar.");
-            }
+                    // Kontrollausgabe
+                    System.out.println("Zahl a ist jetzt: " + a);
+                    System.out.println("Zahl b ist jetzt: " + b);
+                    break;
+                }
+                case 'q': {
+                    weiter = false;
+                    System.out.println("Tschüss.");
+                    break;
+                }
+
+                default: {
+                    System.out.println("Operation nicht verfügbar.");
+                }
 
             }
 
